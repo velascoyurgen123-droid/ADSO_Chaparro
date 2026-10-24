@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Carlos Chaparro">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OmniSwipe · Dating Experience</title>
+  <link rel="stylesheet" href="./css/styles.css">
+  <script type="module" src="./js/index.js"></script>
+</head>
+<body>
+  <div class="shadow"><main><section>
+    <div class="white-bkg"></div>
+    <header><img src="./imgs/tinder-logo.webp" alt="OmniSwipe"></header>
+    <div class="app-views">
+      <div class="app-view is-active" data-view="swipe">
+        <div class="cards" aria-live="polite"></div>
+        <footer class="swipe-actions">
+          <button class="is-undo" aria-label="Deshacer"></button><button class="is-remove is-big" aria-label="Eliminar"></button><button class="is-star" aria-label="Super Like"></button><button class="is-fav is-big" aria-label="Like"></button><button class="is-zap" aria-label="Boost"></button>
+        </footer>
+      </div>
+      <section class="app-view simple-view" data-view="explore"><h1>Explorar</h1><p>Descubre nuevas conexiones y experiencias.</p><div class="explore-grid"><span>Personas cerca</span><span>Intereses</span><span>Eventos</span></div></section>
+      <section class="app-view simple-view" data-view="likes"><h1>Likes recibidos</h1><div class="likes-grid" aria-live="polite"></div></section>
+      <section class="app-view chat-view" data-view="matches"><h1>Matches y mensajes</h1><h2>New Matches</h2><div class="match-row"></div><h2>Messages</h2><div class="message-list"></div></section>
+      <section class="app-view profile-view" data-view="profile"><div class="user-photo"><img src="./imgs/photos/user_avatar.webp" alt="Tu foto de perfil"><button aria-label="Editar foto">✎</button></div><h1>Tu nombre, 28</h1><p>Product designer · Bogotá</p><button class="gold-button">Descubre MAYTCH Gold</button><div class="settings-list"><button>Editar información <span>›</span></button><button>Configuración <span>›</span></button><button>Ayuda y soporte <span>›</span></button></div></section>
+    </div>
+    <nav class="bottom-nav" aria-label="Navegación principal">
+      <button class="nav-item is-active" data-target="swipe" aria-label="Swipe">♥</button><button class="nav-item" data-target="explore" aria-label="Explorar">▦</button><button class="nav-item" data-target="likes" aria-label="Likes recibidos">★</button><button class="nav-item" data-target="matches" aria-label="Mensajes">☵</button><button class="nav-item" data-target="profile" aria-label="Perfil">●</button>
+    </nav>
+  </section></main></div>
+</body>
+</html>
