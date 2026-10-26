@@ -1,0 +1,14 @@
+Configuración de rutas (líneas 5-8)
+
+const root = resolve(new URL('..', import.meta.url).pathname);
+const sourceA = resolve(root, 'imgs/photos/1.webp');
+const sourceB = resolve(root, 'imgs/photos/2.webp');
+const outputDir = resolve(root, 'imgs/photos');
+
+Posible bug en Windows: new URL('..', import.meta.url).pathname devuelve rutas con formato POSIX (ej. /C:/proyecto/...), lo cual falla en Windows. Una solución más robusta sería usar fileURLToPath:
+
+import { fileURLToPath } from 'node:url';
+const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
+
+Manejo de errores: Envuelve el bucle en try/catch para reportar qué asset falló sin detener todo el proceso.
+¿Quieres que te ayude a refactorizarlo o a adaptarlo a otra herramienta como sharp (que no requiere ImageMagick instalado)?
